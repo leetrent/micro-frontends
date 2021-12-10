@@ -14,7 +14,10 @@ export default () => {
                 if (pathname !== nextPathname) {
                     history.push(nextPathname);
                 }
-            }
+            },
+            onSignIn: () => {
+                console.log("[container][AuthApp][onSignIn]")
+            },
         });
         history.listen(onParentNavigate);
     }, []);
